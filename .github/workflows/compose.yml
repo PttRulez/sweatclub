@@ -20,7 +20,7 @@ jobs:
           script: |
             cp /var/www/env-files/sweatclub/.env /var/www/pttrulez-subdomains/sweatclub/.env
             cp /var/www/env-files/sweatclub/.env.apps.api /var/www/pttrulez-subdomains/sweatclub/apps/api/.env
-            cp /var/www/env-files/sweatclub/.env.package.database /var/www/pttrulez-subdomains/sweatclub/packages/database/.env
+            cp /var/www/env-files/sweatclub/.env.packages.database /var/www/pttrulez-subdomains/sweatclub/packages/database/.env
             cd /var/www/pttrulez-subdomains/sweatclub
             git pull
             docker-compose up -d --build
