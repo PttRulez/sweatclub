@@ -1,0 +1,25 @@
+{
+  "name": "sweatclub",
+  "version": "1.0.0",
+  "description": "Проект потного клуба",
+  "private": true,
+  "preferYarn": true,
+  "scripts": {
+    "build": "turbo build",
+    "start": "turbo start",
+    "dev": "turbo dev",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push",
+    "preinstall": "npx only-allow yarn"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.12.4"
+  }
+}

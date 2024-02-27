@@ -1,0 +1,37 @@
+version: "3"
+
+name: sweatclub_app
+services:
+  postgresdb:
+    container_name: sweatclub_pg
+    image: postgres
+    restart: always
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - pg_volume:/var/lib/postgresql
+    networks:
+      - sweatclub
+
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+    depends_on:
+      - postgresdb
+    ports:
+      - 4001:3000
+    networks:
+      - sweatclub
+
+volumes:
+  pg_volume:
+
+networks:
+  sweatclub:
+    name: sweatclub

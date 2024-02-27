@@ -1,0 +1,20 @@
+{
+  "name": "database",
+  "version": "0.0.1",
+  
+  "dependencies": {
+    "@prisma/client": "^5.10.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.10.2"
+  },
+  "main": "./dist/index.js",
+  "types": "./index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon index.ts",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate",
+    "db:prod": "npx prisma generate && yes | npx prisma db push"
+  }
+}
