@@ -7,7 +7,7 @@ services:
     image: postgres
     restart: always
     ports:
-      - 5434:5432
+      - ${DOCKER_PG_PORT}:5432
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_DB=${POSTGRES_DB}
@@ -18,14 +18,14 @@ services:
       - sweatclub
 
   api:
-    container_name: api
+    container_name: sweatclub_api
     build:
       context: .
       dockerfile: ./apps/api/Dockerfile
     depends_on:
       - postgresdb
     ports:
-      - 4001:3000
+      - ${DOCKER_API_PORT}:3001
     networks:
       - sweatclub
 
