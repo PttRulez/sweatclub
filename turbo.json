@@ -12,6 +12,9 @@
     "start": {
       "dependsOn": ["^start"]
     },
+    "lint": {
+      "cache": false
+    },
     "db:generate": {
       "cache": false
     },

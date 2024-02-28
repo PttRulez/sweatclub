@@ -1,9 +1,9 @@
-import { PassportUser } from './user';
+import { PassportUser } from './user'
 
 declare global {
-	namespace Express {
-		export interface Request {
-			user: PassportUser
-		}
-	}
+  namespace Express {
+    export interface Request {
+      user: PassportUser
+    }
+  }
 }

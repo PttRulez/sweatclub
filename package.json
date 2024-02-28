@@ -6,11 +6,12 @@
   "preferYarn": true,
   "scripts": {
     "build": "turbo build",
-    "start": "turbo start",
     "dev": "turbo dev",
     "db:generate": "turbo db:generate",
     "db:push": "turbo db:push",
-    "preinstall": "npx only-allow yarn"
+    "lint": "turbo lint",
+    "preinstall": "npx only-allow yarn",
+    "start": "turbo start"
   },
   "keywords": [],
   "author": "",
