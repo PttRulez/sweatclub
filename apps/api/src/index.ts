@@ -14,5 +14,5 @@ app.use(passport.initialize())
 app.use('/api', routes)
 
 app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`)
+  console.log(`[server]: Sweaty Server is running at http://localhost:${port}`)
 })
